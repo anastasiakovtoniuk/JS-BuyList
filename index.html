@@ -1,15 +1,73 @@
 <!DOCTYPE html>
-<html>
-<head lang="uk">
+<html lang="uk">
+<head>
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик Покупок</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<h1>Hello World</h1>
-<p>Hello Git</p>
-<div class="text2018">Hi 2018!!!</div>
+    <div class="container">
+        <div class="shopping-cart">
+            <div class="input-section">
+                <input type="text" placeholder="Назва товару">
+                <button class="add-button" data-tooltip="Додати товар">Додати</button>
+            </div>
+
+            <div class="item-list">
+                <div class="cart-item">
+                    <span class="item-name">Помідори</span>
+                    <div class="quantity-controls">
+                        <span class="quantity-display">2</span>
+                    </div>
+                    <button class="status-button not-bought" data-tooltip="Позначити як куплено">Не куплено</button>
+                    </div>
+
+                <div class="cart-item bought">
+                    <span class="item-name">Печиво</span>
+                    <div class="quantity-controls">
+                        <button class="quantity-minus" data-tooltip="Зменшити кількість">-</button>
+                        <span class="quantity-input">2</span>
+                        <button class="quantity-plus" data-tooltip="Збільшити кількість">+</button>
+                    </div>
+                    <button class="status-button bought-button" data-tooltip="Позначити як не куплено">Куплено</button>
+                    <button class="delete-button" data-tooltip="Видалити товар">&times;</button>
+                </div>
+
+                <div class="cart-item bought">
+                    <input type="text" class="item-name" value="Сир">
+                    <div class="quantity-controls">
+                        <button class="quantity-minus" data-tooltip="Зменшити кількість">-</button>
+                        <span class="quantity-input">1</span>
+                        <button class="quantity-plus" data-tooltip="Збільшити кількість">+</button>
+                    </div>
+                    <button class="status-button bought-button" data-tooltip="Позначити як не куплено">Куплено</button>
+                    <button class="delete-button" data-tooltip="Видалити товар">&times;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary-panel">
+            <div class="remaining-items">
+                <h3>Залишилося</h3>
+                <div class="summary-tags">
+                    <span class="summary-tag">Печиво <span class="tag-quantity">2</span></span>
+                    <span class="summary-tag">Сир <span class="tag-quantity">1</span></span>
+                </div>
+            </div>
+
+            <div class="bought-items">
+                <h3>Куплено</h3>
+                <div class="summary-tags">
+                    <span class="summary-tag">Помідори <span class="tag-quantity">2</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="animated-badge">
+        <div class="badge-content initial-content">Buy List</div>
+        <div class="badge-content animated-text">Created by: Kovtoniuk Anastasia</div>
+    </div>
 </body>
 </html>
